@@ -9,16 +9,24 @@
         <link href="<?PHP echo CSSPATH; ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="<?PHP echo CSSPATH; ?>vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
         <link href="<?PHP echo CSSPATH; ?>dist/css/sb-admin-2.css" rel="stylesheet">
-        <link href="<?PHP echo CSSPATH; ?>vendor/morrisjs/morris.css" rel="stylesheet">
+        <!--<link href="<?PHP /*echo CSSPATH; */?>vendor/morrisjs/morris.css" rel="stylesheet">-->
         <link href="<?PHP echo CSSPATH; ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <link href="<?PHP echo CSSPATH; ?>vendor/datatable
+        s-plugins/dataTables.bootstrap.css" rel="stylesheet">
+        <link href="<?PHP echo CSSPATH; ?>vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
 
         <script src="<?PHP echo JSPATH; ?>vendor/jquery/jquery.min.js"></script>
         <script src="<?PHP echo JSPATH; ?>vendor/bootstrap/js/bootstrap.min.js"></script>
         <script src="<?PHP echo JSPATH; ?>vendor/metisMenu/metisMenu.min.js"></script>
-        <script src="<?PHP echo JSPATH; ?>vendor/raphael/raphael.min.js"></script>
-        <script src="<?PHP echo JSPATH; ?>vendor/morrisjs/morris.min.js"></script>
-        <script src="<?PHP echo JSPATH; ?>data/morris-data.js"></script>
+        <!--<script src="<?PHP /*echo JSPATH; */?>vendor/raphael/raphael.min.js"></script>-->
+        <!--<script src="<?PHP /*echo JSPATH; */?>vendor/morrisjs/morris.min.js"></script>-->
+        <!--<script src="<?PHP /*echo JSPATH; */?>data/morris-data.js"></script>-->
         <script src="<?PHP echo JSPATH; ?>dist/js/sb-admin-2.js"></script>
+
+        <script src="<?PHP echo JSPATH; ?>vendor/datatables/js/jquery.dataTables.min.js"></script>
+        <script src="<?PHP echo JSPATH; ?>vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+        <script src="<?PHP echo JSPATH; ?>vendor/datatables-responsive/dataTables.responsive.js"></script>
 
         {css_for_layout}
         {js_for_layout}
@@ -34,7 +42,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                    <a class="navbar-brand" href="index.html">Finances</a>
                 </div>
 
                 <ul class="nav navbar-top-links navbar-right">
@@ -241,7 +249,7 @@
                 <div class="navbar-default sidebar" role="navigation">
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
-                            <li class="sidebar-search">
+                            <!--<li class="sidebar-search">
                                 <div class="input-group custom-search-form">
                                     <input type="text" class="form-control" placeholder="Search...">
                                     <span class="input-group-btn">
@@ -250,22 +258,40 @@
                                 </button>
                             </span>
                                 </div>
-                            </li>
+                            </li>-->
                             <li>
-                                <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                                <a href="/"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                             </li>
+
                             <li>
-                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                                <a><i class="fa fa-bar-chart-o fa-fw"></i> Cadastros<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="flot.html">Flot Charts</a>
+                                        <a href="/cadastros/contas">Contas</a>
                                     </li>
                                     <li>
-                                        <a href="morris.html">Morris.js Charts</a>
+                                        <a href="/cadastros/faturas-mensais">Faturas Mensais</a>
+                                    </li>
+                                    <li>
+                                        <a href="/cadastros/categorias">Categorias</a>
                                     </li>
                                 </ul>
                             </li>
+
                             <li>
+                                <a><i class="fa fa-bar-chart-o fa-fw"></i> Finanças<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="/financeiro/contas-a-pagar">Contas a Pagar</a>
+                                    </li>
+                                    <li>
+                                        <a href="/financeiro/contas-a-receber">Contas a Receber</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                            <!--<li>
                                 <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
                             </li>
                             <li>
@@ -332,18 +358,15 @@
                                         <a href="login.html">Login Page</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li>-->
+
+
                         </ul>
                     </div>
                 </div>
             </nav>
 
             <div id="page-wrapper">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">Dashboard</h1>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-lg-12">
                         {content_for_layout}

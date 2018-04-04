@@ -305,8 +305,8 @@ switch (ENVIRONMENT)
 
 	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
     define('LAYOUTPATH', $application_folder.'/layouts/');
-    define('JSPATH', 'public\js\\');
-    define('CSSPATH', 'public\css\\');
+    define('JSPATH', '\public\js\\');
+    define('CSSPATH', '\public\css\\');
 
 /*
  * --------------------------------------------------------------------

@@ -98,10 +98,10 @@ $db['postgres'] = array(
 
 $db['mysql'] = array(
     'dsn'	=> '',
-    'hostname' => 'localhost',
-    'username' => 'root',
-    'password' => '',
-    'database' => '',
+    'hostname' => 'br52.hostgator.com.br',
+    'username' => 'rafae415_admin',
+    'password' => 'admin',
+    'database' => 'rafae415_finance',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => FALSE,
