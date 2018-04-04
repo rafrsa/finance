@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Cadastros extends CI_Controller {
 
-	public function index()
+    public function index()
 	{
 	}
 
@@ -18,5 +18,12 @@ class Cadastros extends CI_Controller {
 
     public function categorias()
     {
+        $this->load->model("Cadastros_model");
+
+        $data = array(
+            'listaCategorias' => $this->Cadastros_model->test()
+        );
+
+        $this->load->view("cadastros/categorias", $data);
     }
 }
