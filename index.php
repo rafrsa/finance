@@ -307,6 +307,7 @@ switch (ENVIRONMENT)
     define('LAYOUTPATH', $application_folder.'/layouts/');
     define('JSPATH', '\public\js\\');
     define('CSSPATH', '\public\css\\');
+    define('IMGPATH', '\public\images\\');
 
 /*
  * --------------------------------------------------------------------
