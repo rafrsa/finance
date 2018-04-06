@@ -66,3 +66,5 @@ $route["cadastros/faturas-mensais"] = "cadastros/faturasMensais";
 $route["cadastros/categorias"] = "cadastros/categorias";
 $route["cadastros/categorias/editar/(:num)"] = "cadastros/editarCategoria/$1";
 $route["cadastros/categorias/excluir/(:num)"] = "cadastros/excluirCategoria/$1";
+$route["cadastros/categorias/nova"] = "cadastros/nova";
+$route["cadastros/categorias/nova/salvar"] = "cadastros/salvarNovaCategoria";

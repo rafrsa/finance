@@ -2,10 +2,10 @@
 
 <div class="row">
     <div class="col-md-12">
-        <a href="" class="btn btn-primary">Nova</a>
+        <a href="/cadastros/categorias/nova" class="btn btn-primary">Nova</a>
     </div>
 </div>
-
+<br>
 <div class="row">
     <div class="col-md-12">
         <table class="table table-striped table-bordered table-hover">
@@ -32,10 +32,15 @@
         </table>
 
         <?php
-        if($retorno){ ?>
+        if($retorno==1){ ?>
             <div class="alert alert-success alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 Categoria removida com sucesso!
+            </div>
+        <?php }else if($retorno==2){ ?>
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                Categoria Inserida com sucesso!
             </div>
         <?php } ?>
     </div>
