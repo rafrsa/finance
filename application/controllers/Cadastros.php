@@ -46,18 +46,29 @@ class Cadastros extends CI_Controller {
     }
 
     public function salvarNovaCategoria(){
+
+        if(isset($_POST["txtNomeCategoria"])){
+            $idCategoria = $this->input->post("txtIdCategoria");
+            $msgRetorno = 2;
+        }else{
+            $idCategoria = false;
+            $msgRetorno = 3;
+        }
+
         $nomeCategoria = $this->input->post("txtNomeCategoria");
 
         $this->load->model("Cadastros_model");
 
-        $this->Cadastros_model->gravarCategoria($nomeCategoria);
-        redirect("cadastros/categorias/2");
+        $this->Cadastros_model->gravarCategoria($nomeCategoria, $idCategoria);
+        redirect("cadastros/categorias/". $msgRetorno);
     }
 
     public function editarCategoria($id){
+        $this->load->model("Cadastros_model");
 
         $data = array(
-            'id' => $id
+            'id' => $id,
+            'nomeCategoria' => $this->Cadastros_model->listarCategorias($id)
         );
 
         $this->load->view("cadastros/nova_categoria", $data);

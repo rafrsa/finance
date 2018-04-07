@@ -42,6 +42,11 @@
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 Categoria Inserida com sucesso!
             </div>
+        <?php }else if($retorno==3){ ?>
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                Categoria Atualizada com sucesso!
+            </div>
         <?php } ?>
     </div>
 </div>

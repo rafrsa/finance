@@ -64,6 +64,7 @@ $route["financeiro/contas-a-receber"] = "financeiro/contasreceber";
 $route["cadastros/contas"] = "cadastros/contas";
 $route["cadastros/faturas-mensais"] = "cadastros/faturasMensais";
 $route["cadastros/categorias"] = "cadastros/categorias";
+$route["cadastros/categorias/(:num)"] = "cadastros/categorias/$1";
 $route["cadastros/categorias/editar/(:num)"] = "cadastros/editarCategoria/$1";
 $route["cadastros/categorias/excluir/(:num)"] = "cadastros/excluirCategoria/$1";
 $route["cadastros/categorias/nova"] = "cadastros/nova";
