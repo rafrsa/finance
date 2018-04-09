@@ -14,6 +14,18 @@ class Cadastros_model extends CI_Model {
         return $query->result_array();
     }
 
+    public function listarContas($id = false){
+        $this->db = $this->load->database('mysql', TRUE);
+
+        if($id){
+            $this->db->where("id", $id);
+        }
+
+        $this->db->order_by('id', 'ASC');
+        $query = $this->db->get("contas");
+        return $query->result_array();
+    }
+
     public function excluirCategoria($id){
         $this->db = $this->load->database('mysql', TRUE);
 

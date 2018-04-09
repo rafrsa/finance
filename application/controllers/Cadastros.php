@@ -11,9 +11,16 @@ class Cadastros extends CI_Controller {
 	{
 	}
 
-    public function contas()
+    public function contas($retorno = false)
     {
-        $this->load->view("cadastros/contas");
+        $this->load->model("Cadastros_model");
+
+        $data = array(
+            'listaCategorias' => $this->Cadastros_model->listarContas(),
+            'retorno' => $retorno
+        );
+
+        $this->load->view("cadastros/contas", $data);
     }
 
     public function faturasMensais()
